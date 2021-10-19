@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.12</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <START><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>17</LINE></START>
+  <REVERSE><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>111</LINE></REVERSE>
+  <CHECK_SWITCH_MODE><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>85</LINE></CHECK_SWITCH_MODE>
+  <SETUP_EXT_INTERRUPT><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>27</LINE></SETUP_EXT_INTERRUPT>
+  <SETUP_TIMER_INTERRUPT><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>34</LINE></SETUP_TIMER_INTERRUPT>
+  <MAIN><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>45</LINE></MAIN>
+  <ModeA><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>55</LINE></ModeA>
+  <ModeB><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>65</LINE></ModeB>
+  <ModeC><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>75</LINE></ModeC>
+  <SWITCH_MODE_1><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>91</LINE></SWITCH_MODE_1>
+  <SWITCH_MODE_2><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>101</LINE></SWITCH_MODE_2>
+  <RESET_1><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>97</LINE></RESET_1>
+  <RESET_2><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>107</LINE></RESET_2>
+  <Exit_Int><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\test3\test3.asm</FILE><LINE>116</LINE></Exit_Int>
+ </LABELS>
+</ASSEMBLER_INFO>

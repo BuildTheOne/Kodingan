@@ -1,0 +1,26 @@
+number gedung 3
+Gedung A;Fasilkom UI Lama;Gedung A Fasilkom UI, di lantai 1 terdapat beberapa lab komputer dan lab Babe, di lantai 2 terdapat ruang Dosen dan lab KI, dan di lantai 3 terdapat ruang Dosen dan Staf Fasilkom UI.
+Gedung B;Fasilkom UI Lama;Gedung B Fasilkom UI, di lantai 1 terdapat Perpustakaan Fasilkom UI(disingkat Perpucil), Aula, Gudang Belakang Aula, dan ruang Lift. Di lantai 2 terdapat 2 Mushola, Ruang BEM, Ruang Ristek, Loket Sekretariat, Ruang Fasum, Sekre Square, Kafe Sekre, jalan Belalai Yuli dan Kantin, dan lift. Lantai 3-6 adalah ruang kelas. Pada lantai 5 ada area belajar dan balkon, lantai 6 ada Lab 2601 dan rooftop di lantai 7.
+Gedung C;Fasilkom UI Lama;Gedung C Fasilkom UI, di lantai 1 terdapat beberapa ruang kelas dan ruang khusus, di lantai 2 dan 3 terdapat ruang Dosen dan Staf Fasilkom UI.
+number labkom 3
+Lab 1101/1103;Gedung A;Lantai 1;120;Lab Komputer terluas di Fasilkom UI, yang kedua adalah Lab 1105/1107.
+Lab 1105/1107;Gedung A;Lantai 1;100;Lab Komputer terluas di Fasilkom UI, yang pertama adalah Lab 1101/1103.
+Lab 2601;Gedung B;Lantai 6;80;Lab Komputer yang paling jarang digunakan, karena waktu buka nya hanya dari jam 8 pagi sampai jam 5 sore.
+activitynum;Gedung A;1
+Babe
+activitynum;Gedung B;12
+2301
+2302
+2303
+2304
+2305
+2306
+2401
+2402
+2403
+2404
+2405
+2406
+activitynum;Gedung C;2
+3112
+3113

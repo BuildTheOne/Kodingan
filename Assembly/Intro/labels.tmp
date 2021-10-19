@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.12</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>16</LINE></init>
+  <loop><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>8</LINE></loop>
+  <DATA><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>41</LINE></DATA>
+  <getvar><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>24</LINE></getvar>
+  <getdata><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>33</LINE></getdata>
+  <forever><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm</FILE><LINE>38</LINE></forever>
+ </LABELS>
+</ASSEMBLER_INFO>

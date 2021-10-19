@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} %codification of the document
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{Determinant}
+% \maketitle
+
+\section*{Determinant}
+\begin{itemize}
+  \item Determinant: a \textbf{scalar value} that is a function of the entries of a \textbf{square matrix}
+  \item Let A be a matrix, then its determinant is denoted by \(det(A)\), \(det A\), or \(|A|\)
+  \item The importance of the determinant
+        \begin{itemize}
+          \item Indicates that a matrix has an inverse or not
+          \item Indicates that a linear system has a unique solution or not
+          \item Plays an important role in determining the values and eigenvectors
+          \item etc.
+        \end{itemize}
+\end{itemize}
+
+\section*{Calculate The Determinant of A Matrix}
+
+\subsection*{Rule of Sarrus}
+\begin{itemize}
+  \item \(2\times 2\) Matrix
+  \item[] Let \(A=\begin{bmatrix}
+      a_{11} & a_{12} \\ a_{21} & a_{22}
+    \end{bmatrix}\), then \(det(A)=(a_{11}.a_{22})-(a_{12}.a_{21})\)
+  \item \(3\times 3\) Matrix
+  \item Let \(A=\begin{bmatrix}
+          a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}
+        \end{bmatrix}\), then:
+        \begin{center}
+          \(det(A)=((a_{11}.a_{22}.a_{23})+(a_{12}.a_{23}.a_{31})+(a_{13}.a_{21}.a_{32}))-((a_{13}.a_{22}.a_{31})+(a_{11}.a_{23}.a_{32})+(a_{12}.a_{21}.a_{33}))\)
+        \end{center}
+\end{itemize}
+Note:
+\begin{itemize}
+  \item Advantage: Simple for \(2\times 2\) and \(3\times 3\) matrices
+  \item Disadvantage: For a larger matrix, it would be very troublesome to calculate the determinant
+\end{itemize}
+
+\subsection*{Cofactor Expansion}
+\subsubsection*{Minor and Cofactor}
+\begin{itemize}
+  \item Minor \(M_{ij}\) is the determinant of matrix A after removing the \(i\)-th row and \(j\)-th column
+  \item The cofactor \(C_{ij}\) is \((-1)^{i+j}M_{ij}\)
+  \item For example, let \(A=\begin{bmatrix}
+          a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}
+        \end{bmatrix}\)
+        \begin{itemize}
+          \item[-] \(M_{13}=det\begin{bmatrix}
+              a_{21} & a_{22} \\ a_{31} & a_{32}
+            \end{bmatrix}\)
+          \item[] \(C_{13}=(-1)^{1+3}M_{13}\)
+          \item[-] \(M_{21}=det\begin{bmatrix}
+              a_{12} & a_{13} \\ a_{32} & a_{33}
+            \end{bmatrix}\)
+          \item[] \(C_{21}=(-1)^{2+1}M_{21}\)
+        \end{itemize}
+\end{itemize}
+\subsubsection*{Row and Column Expansion}
+\begin{itemize}
+  \item Based on the formula derivation from the Rule of Sarrus, there is a pattern
+  \item This derived the cofactor expansion : \begin{center}
+          \(det(A) = \sum\limits_{j=1}^{n} a_{ij}C_{ij} = \sum\limits_{i=1}^{n} a_{ij}C_{ij}\)
+        \end{center}
+  \item[] For example, let \(A=\begin{bmatrix}
+      a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}
+    \end{bmatrix}\), then:
+    \begin{itemize}
+      \item Row 1 Expansion: \(det(A) = a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}\)
+      \item Column 3 Expansion: \(det(A) = a_{13}C_{13}+a_{23}C_{23}+a_{33}C_{33}\)
+    \end{itemize}
+\end{itemize}
+Note: Sometimes, it is important to examine the matrix first to find the easiest row or column to calculate the determinant
+
+\subsection*{Combinatorics}
+TBA
+
+\subsection*{Elementary Row Operation}
+\subsubsection*{Effect of Elementary Row Operations on Determinants}
+If \(X'\) obtained from matrix \(X\) by applying an elementary row operation \(R\), then: \begin{center}
+  \begin{tabular}{|c|l|} \hline
+    \textbf{Elementary Row Operation}         & \textbf{Effect on Determinant} \\ \hline
+    \(R_i\leftrightarrow R_j\)                & \(det(X')=-1.det(X)\)          \\ \hline
+    \(R_i\leftarrow k.R_i, k\neq 0 \)         & \(det(X')=k.det(X)\)           \\ \hline
+    \(R_i\leftarrow k.R_i+l.R_j, k,l\neq 0 \) & \(det(X')=det(X)\)             \\ \hline
+  \end{tabular}
+\end{center}
+\subsubsection*{Elementary Row Operation}
+Let \(A\) a matrix, \(I\) is reduced row-echelon form of A, \(r\) is the times interchange row operations, \(s\) is the times multiply the equation with nonzero constant \(k_1,k_2,\dots\ k_s\), and \(t\) is the adding a multiple of one equation to another. The determinant of A can be calculate from the elementary row operations that used to change the matrix from A to I as follows:
+\begin{center}
+  \(det(A)=\frac{(-1)^r}{(k_1k_2\dots k_s)}\)
+\end{center}
+
+\subsection*{Simple Matrices}
+There are 'cheat' for certain matrices.
+\begin{itemize}
+  \item Diagonal Matrix
+  \item[] \(A=\begin{bmatrix}
+      9 & 0 & 0 \\ 0 & 7 & 0 \\ 0 & 0 & 8
+    \end{bmatrix}\), \(det(A)=9\times 7\times 8=504\)
+  \item Upper Triangular Matrix
+  \item[] \(B=\begin{bmatrix}
+      1 & 2 & 3 \\ 0 & 2 & -4 \\ 0 & 0 & 5
+    \end{bmatrix}\), \(det(A)=1\times 2\times 5=10\)
+  \item Matrix with Row or Column Zero
+  \item[] \(C=\begin{bmatrix}
+      1 & 6 & 7 \\ 2 & 4 & 8\\ 0 & 0 & 0
+    \end{bmatrix}\), \(det(A)=0\)
+  \item[] \(D=\begin{bmatrix}
+      1 & 0 & 7 \\ 2 & 0 & 8\\ 3 & 0 & 9
+    \end{bmatrix}\), \(det(A)=0\)
+  \item Matrix with Identical Row
+  \item[] \(E=\begin{bmatrix}
+      1 & 4 & 7 \\ 1 & 4 &7\\ 3 & 8 & 9
+    \end{bmatrix}\), \(det(A)=0\)
+\end{itemize}
+
+\section*{Properties of Determinant}
+\begin{itemize}
+  \item \(det(AB)=det(A).det(B)\)
+  \item \(det(A+B)\neq det(A)+det(B)\)
+  \item \(det(A^T)=det(A)\)
+  \item \(det(A)=\frac{1}{det(A^{-1})}\)
+  \item Let \(A\) a square matrix of order \(n\), then \(det(kA)=k^n det(A)\)
+\end{itemize}
+
+\section*{Cramer's Rule}
+
+\subsection*{Adjoint Matrix}
+\begin{itemize}
+  \item Let \(A\) be a square matrix of order \(n\). The adjoint of matrix \(A\) is the \underline{transpose} of the \underline{cofactor matrix} of \(\).
+  \item Denoted by \(adj A\)
+  \item Also called Adjugate Matrix
+\end{itemize}
+\begin{center}
+  \(A=\begin{bmatrix}
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \dots  & a_{nn} \\
+  \end{bmatrix} \Rightarrow [C_{ij}]=\begin{bmatrix}
+    C_{11} & C_{12} & \dots  & C_{1n} \\
+    C_{21} & C_{22} & \dots  & C_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    C_{n1} & C_{n2} & \dots  & C_{nn} \\
+  \end{bmatrix} \Rightarrow \) \\
+  \(adj A=[C_{ij}]^T=\begin{bmatrix}
+    C_{11} & C_{21} & \dots  & C_{n1} \\
+    C_{12} & C_{22} & \dots  & C_{n2} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    C_{1n} & C_{2n} & \dots  & C_{nn} \\
+  \end{bmatrix}\)
+\end{center}
+
+\subsubsection*{Cramer’s Rule}
+\begin{itemize}
+  \item Cramer’s Rule: A method that uses determinants to solve systems of equations that have the same number of equations as variables.
+  \item Consider a linear system \(Ax=b\) and \(A\) has an inverse. Then:
+  \begin{align*}
+    x & = A^{-1} b \\
+    & = \Bigg(\frac{1}{det(A)}.adj A\Bigg)b \\ 
+    \begin{bmatrix}
+      x_1 \\ x_2 \\ \vdots \\ x_n
+    \end{bmatrix} & = \frac{1}{det(A)}.\begin{bmatrix}
+      C_{11} & C_{21} & \dots  & C_{n1} \\
+      C_{12} & C_{22} & \dots  & C_{n2} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      C_{1n} & C_{2n} & \dots  & C_{nn} \\
+    \end{bmatrix} \begin{bmatrix}
+      b_1 \\ b_2 \\ \vdots \\ b_n
+    \end{bmatrix} \\
+    & = \frac{1}{det(A)}.\begin{bmatrix}
+      b_1C_{11} & b_2C_{21} & \dots  & b_nC_{n1} \\
+      b_1C_{12} & b_2C_{22} & \dots  & b_nC_{n2} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      b_1C_{1n} & b_2C_{2n} & \dots  & b_nC_{nn} \\
+    \end{bmatrix} \\ 
+    & = \frac{1}{det(A)}.\begin{bmatrix}
+      det(A_1) \\ det(A_2) \\ \vdots \\ det(A_n)
+    \end{bmatrix}
+  \end{align*}
+  \item[] \(\therefore x_j=\frac{det(A_j)}{det(A)}\), for \(j=1,2,\dots n\)
+\end{itemize}
+Note: Because determinant of coefficient matrix are used as divisor, then Cramer's Rule can be applied if \textbf{the coefficient matrix is square matrix} and its \textbf{determinant is nonzero} (or \textbf{the coefficient matrix has inverse}).
+
+\end{document}

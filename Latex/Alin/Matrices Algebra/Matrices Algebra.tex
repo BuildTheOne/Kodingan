@@ -1,0 +1,206 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} %codification of the document
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{Matrix Algebra}
+% \maketitle
+
+\section*{Matrix}
+\begin{itemize}
+  \item \textbf{Matrix} is a rectangle array of numbers consisting of \textbf{rows} and \textbf{columns}
+  \item Matrix \(A\) can be written as \(a_{ij}\), where \(i\) is row and \(j\) are column, written as \(i\times j\)
+  \item A matrix \(A\) with the order \(n \times n\), or a square matrix, has the entries consisting \(a_{11},a_{22},...,a_{nn}\) called \textbf{main diagonal} of \(A\)
+\end{itemize}
+
+\subsection*{Type of Matrices}
+\begin{itemize}
+  \item Square Matrix: Matrix with the same number of rows and the number of columns
+  \item Zero Matrix: Matrix all of whose entries are zero
+  \item Identity Matrix: Square matrix where its main diagonal is 1 and other elements are 0
+  \item Column Matrix:
+  \item Row Matrix:
+\end{itemize}
+
+\section*{Operations on Matrices}
+
+\subsection*{Equality of Matrices}
+Two matrices are defined to be equal if they have the same size and their corresponding entries are equal.
+
+\subsection*{Addition and Subtraction}
+Let \(A=(a_{ij})\) and \(B=(b_{ij})\) and has the same order \(m\times n\). Addition and subtraction of \(A\pm B\) are defined as :
+\begin{center}
+  \((A\pm B)_{ij}=A_{ij}\pm B_{ij}=a_{ij}\pm b_{ij}\)
+\end{center}
+The result elements are :
+\begin{center}
+  \(A+B=[a_{ij}+b_{ij}]\)
+\end{center}
+Note:
+\begin{itemize}
+  \item Addition and subtraction matrices could be done if and only if the order or size of said matrices is the same
+\end{itemize}
+
+\subsection*{Multiplication}
+\subsubsection*{Scalar}
+Let \(A=[a_{ij}]\) and scalar \(k\). Scalar multiplication \(kA\) defined as:
+\begin{center}
+  \((kA)_{ij}=k.(A)_{ij}=ka_{ij}\)
+\end{center}
+\subsubsection*{Two Matrices}
+Let \(A=(a)_{ij}\) with the order \(m\times n\) and \(B=(b)_{ij}\) with the order \(p\times q\). If \(n=p\), then the product of AB is a matrix with the order \(m\times q\) and defined as :
+\begin{center}
+  \([AB]_{ij}=\sum\limits_{s=1}^{n} a_{is}b_{sj} \)
+\end{center}
+Note:
+\begin{itemize}
+  \item If \(n\neq p\) then product of AB is undefined
+  \item The Cancellation Law does not hold
+\end{itemize}
+
+
+\subsection*{Exponential}
+Let \(A=[a_{ij}]\) a square matrix of order \(n\), then for \(k \geq0\), defined as \(A^k=I\) for \(k=0\), and
+\begin{center}
+  \(A^k=\underbrace{A\times A\times A\times ... \times A}_{\text{k times}}\) \\
+  \(A^{m+n}=A^nA^m\)
+\end{center}
+
+\section*{Properties of Matrices Algebra}
+\begin{itemize}
+  \item Addition matrices are commutative
+        \begin{center}
+          \(A+B=B+A\)
+        \end{center}
+  \item Addition matrices are associative
+        \begin{center}
+          \((A+B)+C=A+(B+C)\)
+        \end{center}
+  \item Addition matrices with zero matrix equal the matrix itself
+        \begin{center}
+          \(A+0=A\)
+        \end{center}
+  \item Each matrix \(A\) has negative \(-A\),with \(-A=-1(A)\) and \(A+(-A)=0\)
+  \item Multiplication matrices with scalar are associative
+        \begin{center}
+          \(s(tA)=st(A)\)
+        \end{center}
+  \item Addition and Multiplication matrices with scalar are distributive
+        \begin{center}
+          \((A+B)C=AC+BC\) \\ \(r(A+B)=rA+rB\)
+        \end{center}
+\end{itemize}
+
+\section*{Transpose}
+Let a matrix \(A\) with the order \(m\times n\), then transpose of matrix \(A\), denoted by \(A^T\), is defined to be matrix with the order \(n\times m\) that results from interchanging the rows and columns of \(A\).
+\subsection*{Properties}
+\begin{itemize}
+  \item Transpose of transpose of matrix A is equal to matrix A
+        \begin{center}
+          \((A^T)^T=A\)
+        \end{center}
+  \item Transpose of matrix are distributive
+        \begin{center}
+          \((A+B)^T=A^T+B^T\)
+        \end{center}
+  \item For scalar k, then
+        \begin{center}
+          \((kA)^T=k(A)^T\)
+        \end{center}
+  \item For two matrices A and B, then
+        \begin{center}
+          \((AB)^T=B^TA^T\)
+        \end{center}
+\end{itemize}
+\subsection*{Symmetric Matrix}
+If a matrix is a square matrix and that matrix is equal with its transpose, then it’s called a symmetric matrix.
+\begin{center}
+  \(A=A^T\)
+\end{center}
+
+\section*{Inverse Matrix}
+\begin{itemize}
+  \item A square matrix \(A\) is called has an inverse if there is \(B\) such that \begin{center}\( AB=BA=I\)\end{center}
+  \item Matrix inverse is denoted by \(A^{-1}\)
+  \item In the case above, the inverse of A is B, or \(A^{-1}=B\)
+\end{itemize}
+
+\subsection*{The Inverse of \(2\times 2\) Matrix}
+Let \(A=\begin{bmatrix}a & b \\ c & d\end{bmatrix}\), then \(A^{-1}=\frac{1}{ab-cd}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}\)
+
+\subsection*{Orthogonal Matrix}
+\begin{itemize}
+  \item Matrix \(A\) is orthogonal if and only if \(A^{T}=A^{-1}\)
+  \item \((A^{-1})^T=(A^T)^{-1}\)
+\end{itemize}
+
+\subsection*{Properties of Matrix Inverse}
+\begin{itemize}
+  \item The inverse of a matrix is \textbf{unique}, or there is \textbf{only one} inverse for each matrix
+  \item Inverse of inverse matrix is equal the matrix itself\begin{center}\((A^{-1})^{-1}=A\)\end{center}
+  \item If \(A\) has an inverse and \(n>0\), then \(A^n\) has an inverse and \((A^n)^{-1}=(A^{-1})^n\)
+  \item For \(k\neq 0\), then \((kA)^{-1}=\frac{1}{k}A^{-1}\)
+  \item Matrix \(B_{m\times n}\) has an inverse, then \(AB\) has an inverse and \((AB)^{-1}=B^{-1}A^{-1}\)
+\end{itemize}
+
+\section*{Elementary Matrix}
+An elementary matrix is a matrix that differs from the identity matrix by \textbf{exactly one} elementary row operation. For example: \\ \\
+\(I=\begin{bmatrix}
+  1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1
+\end{bmatrix}\) $\xRightarrow{R_2 \leftarrow 7\times R_2}$ \(\begin{bmatrix}
+  1 & 0 & 0 & 0 \\ 0 & 7 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1
+\end{bmatrix}\)
+
+\subsection*{Inverse of Elementary Matrix}
+\begin{itemize}
+  \item Consider this matrix.
+        \begin{itemize}
+          \item \(E=\begin{bmatrix}
+                  1 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 1
+                \end{bmatrix}\) is a elementary matrix from \(I\) by applying a single row operation \(R_2 \leftarrow 3R_2\)
+          \item Inverse of matrix E, denoted by \(E^{-1}\), can be obtained from \(I\) by applying the inverse of said single row operation, \(R_2 \leftarrow \frac{1}{3}R_2\)
+        \end{itemize}
+  \item So, the inverse elementary matrix can be obtained by applying the inverse single row operation
+  \item Each elementary matrix has an inverse and its inverse is also an elementary matrix
+\end{itemize}
+
+\subsection*{Multiplication with Elementary Matrix}
+Let square matrices \(E\) and \(A\) with the same order \(m\times m\), with \(E\) is an elementary matrix by applying a single row operation, named \(R\). The product of \(EA\) is equal with applying single elementary row operation \(R\) to \(A\).
+
+\section*{Finding Inverse with Elementary Row Operation}
+If matrix \(A\) has an inverse, then \(A\) can be reduced to row echelon form by performing a sequence of elementary row operation to obtained the inverse of \(A\), or \(A^{-1}\) \\
+For example: Let \(A=\begin{bmatrix}
+  4 & 2 \\ 2 & 2
+\end{bmatrix}\) \\ \\
+\begin{enumerate}
+  \item Reduce matrix \(A\) to row echelon form \((A | I)\)
+  \item Perform a sequence of elementary row operation:
+        \begin{enumerate}
+          \item \(\left[\begin{array}{cc|cc}
+                    4 & 2 & 1 & 0 \\ 2 & 2 & 0 & 1
+                  \end{array}\right] \) $\xRightarrow{R_1 \leftarrow \frac{1}{4}R_1}$\(\left[\begin{array}{cc|cc}
+                    1 & \frac{1}{2} & \frac{1}{4} & 0 \\ 2 & 2 & 0 & 1
+                  \end{array}\right] \)
+          \item \(\left[\begin{array}{cc|cc}
+                    1 & \frac{1}{2} & \frac{1}{4} & 0 \\ 2 & 2 & 0 & 1
+                  \end{array}\right] \) $\xRightarrow{R_2 \leftarrow R_2 - 2R_1}$ \(\left[\begin{array}{cc|cc}
+                    1 & \frac{1}{2} & \frac{1}{4} & 0 \\ 0 & 1 & -\frac{1}{2} & 1
+                  \end{array}\right] \)
+          \item \(\left[\begin{array}{cc|cc}
+                    1 & \frac{1}{2} & \frac{1}{4} & 0 \\ 0 & 1 & -\frac{1}{2} & 1
+                  \end{array}\right] \) $\xRightarrow{R_1 \leftarrow R_1-\frac{1}{2}R_2}$ \(\left[\begin{array}{cc|cc}
+                    1 & 0 & \frac{1}{2} & -\frac{1}{2} \\ 0 & 1 & -\frac{1}{2} & 1
+                  \end{array}\right] \)
+        \end{enumerate}
+  \item The result is \((I|A^{-1})=\left[\begin{array}{cc|cc}
+            1 & 0 & \frac{1}{2} & -\frac{1}{2} \\ 0 & 1 & -\frac{1}{2} & 1
+          \end{array}\right]\), or \(A^{-1}=\begin{bmatrix}
+          \frac{1}{2} & -\frac{1}{2} \\ -\frac{1}{2} & 1
+        \end{bmatrix}\)
+\end{enumerate}
+
+\section*{Solving System of Linear Equation with Inverse Matrix}
+If matrix \(A\) has an inverse, then for each matrix \(B\) with the order \(n\times 1\), system of linear equation \(Ax=B\) has unique solution, with \(x=A^{-1}B\)
+
+\end{document}

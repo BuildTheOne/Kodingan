@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.12</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <KelilingAlas><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>16</LINE></KelilingAlas>
+  <LuasAlas><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>26</LINE></LuasAlas>
+  <loop><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>33</LINE></loop>
+  <LuasPermukaanPrisma><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>42</LINE></LuasPermukaanPrisma>
+  <VolumePrisma><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>54</LINE></VolumePrisma>
+  <End><FILE>C:\Users\DIMAS\DIMAS\asm\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab4_1_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>59</LINE></End>
+ </LABELS>
+</ASSEMBLER_INFO>

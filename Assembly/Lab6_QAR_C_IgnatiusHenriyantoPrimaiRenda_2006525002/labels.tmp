@@ -1,0 +1,36 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.12</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>35</LINE></MAIN>
+  <GANTI_ARAH><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>105</LINE></GANTI_ARAH>
+  <GANTI_DELAY><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>113</LINE></GANTI_DELAY>
+  <INIT_STACK><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>37</LINE></INIT_STACK>
+  <INIT_LED><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>42</LINE></INIT_LED>
+  <INIT_INTERRUPT><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>46</LINE></INIT_INTERRUPT>
+  <LED_LOOP_MASUK><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>53</LINE></LED_LOOP_MASUK>
+  <DELAY><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>99</LINE></DELAY>
+  <LED_LOOP_KELUAR><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>76</LINE></LED_LOOP_KELUAR>
+  <DELAY_01><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>119</LINE></DELAY_01>
+  <DELAY_02><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>137</LINE></DELAY_02>
+  <L1><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>129</LINE></L1>
+  <L2><FILE>C:\Users\DIMAS\DIMAS\Coding\Assembly\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002\Lab6_QAR_C_IgnatiusHenriyantoPrimaiRenda_2006525002.asm</FILE><LINE>148</LINE></L2>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,11 @@
+; Nama      : Ignatius Henriyanto Primai Renda
+; NPM       : 2006525002
+; Kelas     : C
+;
+.include "m8515def.inc"  ; include the 8515 definition file
+
+
+
+; End digunakan untuk melakukan infinite loop dan "mengakhiri" program
+End:
+	RJMP End

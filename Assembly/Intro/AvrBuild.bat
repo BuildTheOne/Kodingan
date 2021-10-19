@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\labels.tmp" -fI -W+ie -o "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.hex" -d "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.obj" -e "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.eep" -m "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.map" "C:\Users\DIMAS\DIMAS\Coding\Assembly\Intro\Intro.asm"
