@@ -584,8 +584,9 @@ TSWLatexianTemp*
 # Other
 Git
 Webdev
-C(++)/SOSI/Demos
+C/SOSI/Demos
 Java/Test1.java
 Java/Test2.java
 Java/Test3.java
 Java/Test4.java
+Javascript/*/*/node_modules
