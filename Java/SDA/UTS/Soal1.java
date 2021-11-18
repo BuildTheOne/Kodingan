@@ -1,3 +1,5 @@
+package SDA.UTS;
+
 /* Tuliskan Nama, NPM, dan Kelasmu di sini:
 ** Nama Lengkap: Ignatius Henriyanto Primai Renda
 ** NPM         : 2006525002

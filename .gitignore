@@ -589,4 +589,5 @@ Java/Test1.java
 Java/Test2.java
 Java/Test3.java
 Java/Test4.java
+Java/*.txt
 Javascript/*/*/node_modules

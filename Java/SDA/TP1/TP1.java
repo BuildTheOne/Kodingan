@@ -1,3 +1,5 @@
+package SDA.TP1;
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -5,8 +7,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.*;
-import static java.lang.Math.min;
-import static java.lang.Math.max;
 
 public class TP1 {
 

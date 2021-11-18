@@ -1,3 +1,5 @@
+package SDA.UTS;
+
 import java.util.*;
 
 /* Tuliskan Nama, NPM, dan Kelasmu di sini:
