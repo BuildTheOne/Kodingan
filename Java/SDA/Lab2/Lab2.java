@@ -8,9 +8,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.*;
 
-import static java.lang.Math.min;
-import static java.lang.Math.max;
-
 public class Lab2 {
 
     private static InputReader in;

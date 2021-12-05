@@ -2,8 +2,6 @@ package SDA.Lab3;
 
 import java.io.*;
 import java.util.*;
-import static java.lang.Math.min;
-import static java.lang.Math.max;
 
 /*
  
