@@ -1,3 +1,3 @@
 # Kodingan
  
-Tempat nyimpen dan ngarsip kodingan selama di Fasilkom
+Tempat nyimpen dan ngarsip kodingan selama di Fasilkom UI

@@ -29,7 +29,7 @@ public class TP3 {
   static class Employee {
     int index;
     Rank rank;
-    List<Employee> friendList = new ArrayList<>();
+    List<Employee> friendList = new ArrayList<>(); // aka adjacency list dalam representasi graph network
 
     boolean alreadyResign;
     Boss boss;
@@ -50,11 +50,18 @@ public class TP3 {
     }
 
     // Heap operation
+    // Insert method untuk melakukan heapify up jika ada teman baru
     void insert(Employee V) {
+      // Tambahkan teman ke dalam friendList
+      // Teman baru akan ditambahkan di bagian belakang list
       friendList.add(V);
 
+      // Ya, kalau friend 0 tidak usah ada heapify :)
       if (friendList.size() != 0) {
         int i = friendList.size() - 1;
+        // While loop untuk mengecek apakah ranking teman baru lebih besar dari heap
+        // parent
+        // Jika iya, maka ada swap antara teman baru dengan parent
         while (friendList.get(i).rank.rank > friendList.get((i - 1) / 2).rank.rank) {
           Employee tmp;
           tmp = friendList.get(i);
@@ -64,8 +71,7 @@ public class TP3 {
         }
       }
 
-      // out.println(printFriends());
-
+      // Jika ranking teman baru lebih besar atau sama dengan dia, otomatis dia jadi rentan
       if (V.rank.rank >= rank.rank) {
         rentan = true;
       }
@@ -73,10 +79,14 @@ public class TP3 {
 
     // Sumber ide: http://btv.melezinek.cz/binary-heap.html
     // (Cuma di bagian heapify down, bagian yg lain ide sendiri)
+    // Delete method untuk melakukan heapify down jika ada teman yang dihapus
     void delete(Employee U) {
+      // Kalau friendnya jadi 0 setelah resign, ya keluarkan saja, tidak perlu heap :)
       if (friendList.size() == 1) {
         friendList.remove(0);
       } else {
+        // 1. Cari index dari teman yang resign
+        // (Karena pake arraylist, jadi harus loop untuk mencarinya)
         int index = 0;
         for (int i = 0; i < friendList.size(); i++) {
           if (friendList.get(i).equals(U)) {
@@ -84,44 +94,51 @@ public class TP3 {
             break;
           }
         }
-        // out.println(printFriends());
+        // 2. Jika teman yg resign ada di tengah2, maka heapify down
         if (index != friendList.size() - 1) {
+          // Swap teman yang dihapus dengan teman yg ada di akhir list
           friendList.set(index, friendList.get(friendList.size() - 1));
           friendList.remove(friendList.size() - 1);
 
+          // Heap down:
+          // Loop selama masih ada dalam jangkauan jumlah teman
           while (index < friendList.size()) {
+            // Ada 3 cases: 1. jika yg di swap ini punya left dan right child:
             if (index * 2 + 2 < friendList.size()) {
+              // Jika yg di swap lebih kecil dari left dan right child, pilih yang lebih
+              // tinggi lalu swap
               if (friendList.get(index).rank.rank < friendList.get(index * 2 + 1).rank.rank
                   && friendList.get(index).rank.rank < friendList.get(index * 2 + 2).rank.rank) {
                 if (friendList.get(index * 2 + 1).rank.rank > friendList.get(index * 2 + 2).rank.rank) {
-                  // out.println(index);
                   Employee tmp = friendList.get(index);
                   friendList.set(index, friendList.get(index * 2 + 1));
                   friendList.set(index * 2 + 1, tmp);
                   index = index * 2 + 1;
                 } else {
-                  // out.println(index);
                   Employee tmp = friendList.get(index);
                   friendList.set(index, friendList.get(index * 2 + 2));
                   friendList.set(index * 2 + 2, tmp);
                   index = index * 2 + 2;
                 }
               } else if (friendList.get(index).rank.rank < friendList.get(index * 2 + 1).rank.rank) {
+                // Jika hanya left child yang lebih besar, swap
                 Employee tmp = friendList.get(index);
                 friendList.set(index, friendList.get(index * 2 + 1));
                 friendList.set(index * 2 + 1, tmp);
                 index = index * 2 + 1;
               } else if (friendList.get(index).rank.rank < friendList.get(index * 2 + 2).rank.rank) {
+                // Yang hanya right child yang lebih besar, swap
                 Employee tmp = friendList.get(index);
                 friendList.set(index, friendList.get(index * 2 + 2));
                 friendList.set(index * 2 + 2, tmp);
                 index = index * 2 + 2;
               } else {
+                // Jika sudah lebih kecil dari kedua child, keluar dari loop
                 break;
               }
             } else if (index * 2 + 1 < friendList.size()) {
+              // 2. Jika hanya ada left child, swap
               if (friendList.get(index).rank.rank < friendList.get(index * 2 + 1).rank.rank) {
-                // out.println(index);
                 Employee tmp = friendList.get(index);
                 friendList.set(index, friendList.get(index * 2 + 1));
                 friendList.set(index * 2 + 1, tmp);
@@ -131,16 +148,19 @@ public class TP3 {
                 break;
               }
             } else {
+              // 3. Kalo mentok udh di paling akhir list
               break;
             }
           }
         } else {
+          // 3. Kalau temannya ada di akhir list, ya hapus saja, tidak perlu heap
           friendList.remove(friendList.size() - 1);
         }
 
-        // out.println(printFriends());
       }
 
+      // Jika ternyata karyawan ini rentan, cek apakah resign teman tadi menyebabkan
+      // karyawan ini jadi tidak rentan
       if (friendList.size() == 0) {
         rentan = false;
       } else {
@@ -174,15 +194,19 @@ public class TP3 {
 
   // TAMBAH
   static void handleTambah(Employee U, Employee V) {
+    // Menambah teman di masing2 karyawan
+    // (Karyawan U menambah V, karyawan V menambah U)
+    // Tiap karyawan melakukan heapify untuk mengurutkan teman berdasarkan ranking
+    // (Lebih lengkap di method insert())
     U.insert(V);
     V.insert(U);
-
   }
 
   // RESIGN
   static void handleResign(Employee U) {
     U.alreadyResign = true;
     U.rank.employeeList.remove(U);
+    // Loop seluruh teman U untuk menghapus U
     for (int i = 0; i < U.friendList.size(); i++) {
       U.friendList.get(i).delete(U);
     }
@@ -191,6 +215,7 @@ public class TP3 {
 
   // CARRY
   static void handleCarry(Employee U) {
+    // Yah, karena friendList sudah pakai max Heap, ambil yang paling pertama
     if (U.friendList.size() == 0) {
       out.println(0);
     } else {
@@ -203,12 +228,12 @@ public class TP3 {
     if (U.friendList.size() == 0) {
       out.println(0);
     } else {
+      // Jika U sudah punya boss, keluarkan
       if (U.boss != null) {
-        // out.println("Boss: " + U.boss.boss);
-        // out.println("Second: " + U.boss.secondInCommand);
         out.println(U.boss.boss.rank.rank);
       } else {
-
+        // Jika tidak, traversal network dengan bfs
+        // Masukkan diri sendiri pertama pertama ke queue
         Queue<Employee> queue = new ArrayDeque<>();
         boolean visited[] = new boolean[employeeList.size() + 1];
         queue.add(U);
@@ -218,17 +243,18 @@ public class TP3 {
         boss.boss = U;
         boss.secondInCommand = U.friendList.get(0);
 
+        // While loop queue, cek friendList, masukan ke queue
         while (!queue.isEmpty()) {
           Employee e = queue.poll();
-          // out.println(e);
           visited[e.index] = true;
           for (int i = 0; i < e.friendList.size(); i++) {
             Employee f = e.friendList.get(i);
             f.boss = boss;
             if (!visited[f.index]) {
+              // Cek apakah sudah dikunjungi
               if (boss.boss.rank.rank <= f.rank.rank) {
-                // out.println(f.boss.boss);
-                // out.println(f.boss.secondInCommand);
+                // Jika ranking boss lebih besar, swap
+                // Yg sebelumnya paling tinggi jadi kedua tertinggi
                 boss.secondInCommand = boss.boss;
                 boss.boss = f;
               }
@@ -238,15 +264,14 @@ public class TP3 {
           }
         }
 
+        // Untuk karyawan yang juga adalah boss, jadikan kedua tertinggi sebagai boss
+        // (Karena network tidak termasuk dirinya sendiri)
         Employee scnd = boss.secondInCommand;
         Boss highest = new Boss();
         highest.boss = scnd;
         boss.boss.boss = highest;
 
-        // out.println("Boss: " + U.boss.boss);
-        // out.println("Second: " + U.boss.secondInCommand);
         out.println(U.boss.boss.rank.rank);
-
       }
     }
   }
@@ -254,8 +279,12 @@ public class TP3 {
   // SEBAR (Credit to: Anisa Maharani)
   static void handleSebar(Employee U, Employee V) {
     if (U.rank == V.rank) {
+      // Jika rankingnya sudah sama, maka keluarkan 0
+      // (Butuh 0 perantara kalau rankingnya sama kan?)
       out.println(0);
     } else {
+      // Traversal network dengan dfs
+      // Masukan ke queue
       Queue<Employee> queue = new ArrayDeque<>();
       boolean visited[] = new boolean[100001];
       boolean visitedRank[] = new boolean[100001];
@@ -263,45 +292,56 @@ public class TP3 {
       queue.add(U);
       sum[U.index] = -1;
 
+      // While loop queue
       while (!queue.isEmpty()) {
         Employee e = queue.poll();
-        // out.println(e.index);
         visited[e.index] = true;
 
+        // Ranking dulu baru teman karena umumnya, 
+        // lewat ranking butuh lebih sedikit perantara daripada lewat teman,
+        // sehingga jika sudah dikunjungi via ranking, tidak perlu dicek lagi 
+        // jika dilewati via teman
+
         if (!visitedRank[e.rank.rank]) {
+          // Traversal berdasarkan ranking
           for (int i = 0; i < e.rank.employeeList.size(); i++) {
             Employee f = e.rank.employeeList.get(i);
-            // out.println(f.index);
+            // Cek apakah sudah dikunjungi
             if (!visited[f.index]) {
               visited[f.index] = true;
+              // Increment perantara minimal
               sum[f.index] = sum[e.index] + 1;
               visitedRank[f.rank.rank] = true;
               if (f.equals(V)) {
+                // Namun jika ternyata sama, break dari loop
                 break;
               }
-              queue.add(f);
+              queue.add(f); // Masukkan ke queue
             }
           }
         }
 
+        // Traversal berdasarkan friendList
         for (int i = 0; i < e.friendList.size(); i++) {
           Employee f = e.friendList.get(i);
-          // out.println(f.index);
+          // Cek apakah sudah dikunjungi
           if (!visited[f.index]) {
             visited[f.index] = true;
+            // Increment perantara minimal
             sum[f.index] = sum[e.index] + 1;
             if (f.equals(V)) {
+              // Namun jika ternyata sama, break dari loop
               break;
             }
-            queue.add(f);
+            queue.add(f); // Masukkan ke queue
           }
         }
       }
+      // Jika queue sudah habis dan karyawan yang dicari ada di network (udah dikunjungi),
+      // Keluarkan jumlah perantara minimal 
       if (queue.isEmpty() && visited[V.index]) {
-        // out.println("Butuh segini: " + sum[V.index]);
         out.println(sum[V.index]);
       } else {
-        // out.println("Gak bisa");
         out.println(-1);
       }
     }
@@ -309,21 +349,22 @@ public class TP3 {
 
   // SIMULASI
   static void handleSimulasi() {
+    // Loop semua karyawan untuk mencari siapa saja yang tidak rentan,
+    // lalu keluarkan jumlahnya
     int countRentan = employee;
     for (int i = 0; i < employeeList.size(); i++) {
       if (!employeeList.get(i).alreadyResign) {
-        // out.println((employeeList.get(i).index + 1) + ": " + employeeList.get(i).rentan);
         if (employeeList.get(i).rentan) {
           countRentan--;
         }
       }
     }
-    // out.println("Sisa karyawan: " + countRentan);
     out.println(countRentan);
   }
 
   // NETWORKING
   static void handleNetworking() {
+    // Yah, gitu deh
     out.println(0);
   }
 
