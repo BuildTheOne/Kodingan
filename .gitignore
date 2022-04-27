@@ -582,4 +582,5 @@ TSWLatexianTemp*
 
 
 # Custom
-Basdat/.vscode/settings.json
+*/*/.vscode
+.vscode
