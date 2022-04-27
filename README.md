@@ -3,7 +3,7 @@
 Tempat nyimpen dan ngarsip kodingan selama di Fasilkom UI
 
 ## Daftar Isi
-- [SEMESTER 1](SEMESTER_1)
+- [SEMESTER 1](Semester_1)
     - [DDP 1](SEMESTER_1/DDP1/)
 - [SEMESTER 2](SEMESTER_2/)
     - [DDP 2](SEMESTER_2/DDP2/)
