@@ -989,7 +989,7 @@ INSERT INTO TRANSAKSI_PEMBELIAN VALUES
 
 
 INSERT INTO STUDIO VALUES
-    ('bio005','s09'),
+    -- ('bio005','s09'),
     ('bio005','s10'),
     ('bio005','s11'),
     ('bio005','s12'),
