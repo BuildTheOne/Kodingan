@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Search</title>
+</head>
+<body>
+  <h2>Search</h2>
+  <form method="post">
+    <p>
+      <input
+        type="text"
+        placeholder="search meaning of somethings..."
+        name="keyword"
+        value="{{ keyword }}"
+      />
+    </p>
+    <p><input type="submit" value="Submit" /></p>
+  </form>
+
+  {% if data %}
+  <h3>Hasil pencarian {{ keyword }}</h3>
+  {% for data_def in data %}
+  <ul>
+    <li>
+      <span style="font-weight: 800; text-transform: capitalize">
+        {{ data_def.partOfSpeech }} </span
+      >: {{ data_def.definitions[0].definition }}
+    </li>
+  </ul>
+  {% endfor %} {% endif %}
+</body>
