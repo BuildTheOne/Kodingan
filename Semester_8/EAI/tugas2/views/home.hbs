@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-2 row-gap-4 text-center">
+  {{#each links}}
+    <div class="col">
+      <div class="card" style="">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{desc}}</p>
+          <a href="{{link}}" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,15 @@
+<form action="/weather" method="post" class="d-flex flex-column gap-3">
+  <div class="d-flex flex-column flex-md-row gap-3">
+    <div class="form-floating w-100">
+      <select class="form-select" id="province" name="province" required>
+        {{#each provinceList}}
+          <option value="{{this}}" class="text-capitalize">
+            {{#replace this "-" " "}}{{this}}{{/replace}}
+          </option>
+        {{/each}}
+      </select>
+      <label for="province">Provinsi</label>
+    </div>
+    <button type="submit" class="btn btn-primary px-5">Cari</button>
+  </div>
+</form>

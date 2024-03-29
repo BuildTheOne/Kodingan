@@ -1,0 +1,88 @@
+<form action="/currency" method="post" class="d-flex flex-column gap-4">
+  <div class="d-flex gap-3">
+    <input
+      type="number"
+      class="form-control"
+      name="currencyAmount1"
+      value="{{currencyAmount1}}"
+      required
+    />
+    <select class="form-select" name="currencyCode1" required>
+      {{#each currencies}}
+        {{#if (eq code @root.currencyCode1)}}
+          <option value="{{code}}" selected>
+            {{#if (eq currencyName "")}}
+              {{code}}
+            {{else}}
+              {{currencyName}}
+            {{/if}}
+          </option>
+        {{/if}}
+        <option value="{{code}}">
+          {{#if (eq currencyName "")}}
+            {{code}}
+          {{else}}
+            {{currencyName}}
+          {{/if}}
+        </option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button
+      type="button"
+      class="btn btn-primary px-5"
+      name="switchButton"
+      onclick="handleSwitchCurrency()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class=""
+        style="width: 1.5rem; height:1.5rem;"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="d-flex gap-3">
+    <input
+      type="number"
+      class="form-control"
+      name="currencyAmount2"
+      value="{{currencyAmount2}}"
+      disabled
+    />
+    <select class="form-select" name="currencyCode2" required>
+      {{#each currencies}}
+        {{#if (eq code @root.currencyCode2)}}
+          <option value="{{code}}" selected>
+            {{#if (eq currencyName "")}}
+              {{code}}
+            {{else}}
+              {{currencyName}}
+            {{/if}}</option>
+        {{/if}}
+        <option value="{{code}}">
+          {{#if (eq currencyName "")}}
+            {{code}}
+          {{else}}
+            {{currencyName}}
+          {{/if}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Hitung</button>
+</form>
+
+<script src="/currency/script.js"></script>
