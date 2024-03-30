@@ -1,4 +1,18 @@
 <form action="/currency" method="post" class="d-flex flex-column gap-4">
+  <div class="d-flex">
+    <div class="form-floating w-100">
+      <input
+        type="date"
+        class="form-control"
+        id="floatingInput"
+        name="dateValue"
+        value="{{dateValue}}"
+        min="{{minDate}}"
+      />
+      <label for="floatingInput">Tanggal</label>
+    </div>
+  </div>
+
   <div class="d-flex gap-3">
     <input
       type="number"
