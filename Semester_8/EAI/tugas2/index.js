@@ -2,7 +2,7 @@ const express = require('express')
 const handlebars = require('express-handlebars');
 const handlebarsHelper = require('handlebars-helpers');
 const currencyRouter = require('./routes/currencyRoute')
-const weatherRouter = require('./routes/weatherRoute')
+const newsRouter = require('./routes/newsRoute')
 
 require('dotenv').config()
 
@@ -27,11 +27,11 @@ app.listen(PORT, () => {
 
 app.get('/', (_, res) => {
   const links = [
-    { title: "Cuaca dan Gempa", desc: "Informasi gempa terkini dan cuaca di Indonesia", link: "/weather" },
-    { title: "Konvert Mata Uang", desc: "Konverter antar Mata Uang, termasuk Cryptocurrencies", link: "/currency" }
+    { title: "Konvert Mata Uang", desc: "Konverter antar Mata Uang, termasuk Cryptocurrencies", link: "/currency" },
+    { title: "Berita Indonesia", desc: "Berita-berita di Indonesia", link: "/news" }
   ]
   res.render('home', { title: "Home", links: links })
 })
 
 app.use('/currency', currencyRouter)
-app.use('/weather', weatherRouter)
+app.use('/news', newsRouter)

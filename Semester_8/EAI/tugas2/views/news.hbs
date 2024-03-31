@@ -1,0 +1,53 @@
+<form method="post" class="d-flex flex-column gap-4">
+  <div class="form-floating">
+    <select class="form-select" id="newsProvider" name="newsProvider">
+      {{#each newsProviders}}
+        {{#if (eq name @root.newsProvider)}}
+          <option value="{{name}}" selected>{{name}}</option>
+        {{/if}}
+        <option value="{{name}}" class="">{{name}}</option>
+      {{/each}}
+    </select>
+    <label for="newsProvider">Pilih provider berita</label>
+  </div>
+
+  {{#if newsProviderCategory}}
+    <div class="form-floating">
+      <select class="form-select" id="category" name="newsCategory">
+        {{#each newsProviderCategory}}
+          {{#if (eq path @root.newsCategory)}}
+            <option value="{{path}}" selected>{{name}}</option>
+          {{/if}}
+          <option value="{{path}}">{{name}}</option>
+        {{/each}}
+      </select>
+      <label for="category">Pilih kategori berita</label>
+    </div>
+  {{/if}}
+
+  <button type="submit" formaction="/news/provider" class="btn btn-primary">
+    Cari kategori
+  </button>
+  {{#if newsProviderCategory}}
+    <button
+      type="submit"
+      formaction="/news/category"
+      class="btn btn-primary"
+    >Cari berita</button>
+  {{/if}}
+
+  {{#if news}}
+    <div class="row row-cols-2 row-cols-md-4 gap-4">
+      {{#each news}}
+        <div class="card">
+          <img src="{{thumbnail}}" class="card-img-top" alt="{{title}}" />
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{description}}</p>
+            <a href="{{link}}" class="stretched-link"></a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</form>
